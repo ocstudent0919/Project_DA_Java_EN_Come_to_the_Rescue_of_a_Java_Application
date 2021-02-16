@@ -13,8 +13,8 @@ import java.util.List;
  */
 public class WriteSymptomDataToFile implements ISymptomWriter{
 
-	private String filepath;
-	private List<String> contents;
+	private final String filepath;
+	private final List<String> contents;
 	
 	/**
 	 * 
