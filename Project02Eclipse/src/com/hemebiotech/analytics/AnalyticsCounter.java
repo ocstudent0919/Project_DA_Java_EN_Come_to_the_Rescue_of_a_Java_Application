@@ -24,7 +24,7 @@ public class AnalyticsCounter {
 	 */
 	public static void main(String[] args) {
 		ISymptomReader reader = new ReadSymptomDataFromFile(FILE_NAME_IN);
-		ISymptomCounter counter = new SymptomCounterImpl(reader.GetSymptoms());
+		ISymptomCounter counter = new SymptomCounterImpl(reader.getSymptoms());
 		ISymptomWriter writer = new WriteSymptomDataToFile(FILE_NAME_OUT, counter.countSymptoms());
 		writer.writeSymptoms();
 	}
