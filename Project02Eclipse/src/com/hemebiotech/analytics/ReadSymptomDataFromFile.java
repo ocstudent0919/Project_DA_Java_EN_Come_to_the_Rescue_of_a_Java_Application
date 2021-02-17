@@ -25,7 +25,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<>();
 		
-		if (filepath != null) {
+		if (filepath != null && !filepath.trim().isEmpty()) {
 			try {
 				BufferedReader reader = new BufferedReader (new FileReader(filepath));
 				String line = reader.readLine();
