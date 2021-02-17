@@ -8,8 +8,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 /**
- * Implementation of writeSymptoms() method
- *
+ * Implementation of the {@link ISymptomWriter} interface.
  */
 public class WriteSymptomDataToFile implements ISymptomWriter{
 
@@ -17,11 +16,10 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
 	private final List<String> contents;
 	
 	/**
-	 * 
-	 * @param filepathOut 
-	 * 					a full or partial path to output file
-	 * @param contents 
-	 * 					a list of symptoms with related number of occurrences to print
+	 * Constructs a WriteSymptomDataToFile using the specified parameters as input.
+	 * @param filepathOut A full or partial path to output file
+	 * @param contents A list of Strings containing symptoms with
+	 *                 related number of occurrences
 	 */
 	public WriteSymptomDataToFile(String filepathOut, List<String> contents) {
 		this.filepath = filepathOut;

@@ -3,14 +3,13 @@ package com.hemebiotech.analytics;
 import java.util.*;
 
 /**
- * Implementation of the {@link ISymptomCounter} interface
+ * Implementation of the {@link ISymptomCounter} interface.
  */
 public class SymptomCounterImpl implements ISymptomCounter {
-    private final List<String> symptoms; //Unordered list of symptoms
+    private final List<String> symptoms;
 
     /**
-     * Creates a SymptomCounterImpl using the specified list of symptoms to count
-     *
+     * Constructs a SymptomCounterImpl using the specified list of symptoms to count.
      * @param symptoms An unordered list of symptoms
      */
     public SymptomCounterImpl(List<String> symptoms) {
@@ -23,7 +22,7 @@ public class SymptomCounterImpl implements ISymptomCounter {
         for (String symptom : symptoms) {
             Integer count = map.get(symptom);
 /*          If the map doesn't contain the element,
-            we put a new map entry (element, 1) to the map ;
+            we put a new map entry (element, 1) to the map;
             otherwise, we increment a counter by 1
             */
             map.put(symptom, (count == null) ? 1 : count + 1);
@@ -43,7 +42,7 @@ public class SymptomCounterImpl implements ISymptomCounter {
     private List<String> getRecords(Map<String, Integer> map) {
         List<String> records = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            records.add(entry.getKey() + " : " + entry.getValue());
+            records.add(entry.getKey() + ": " + entry.getValue());
         }
         return records;
     }

@@ -1,8 +1,8 @@
 package com.hemebiotech.analytics;
 
 /**
- * AnalyticsCounter --- A trend analysis program aimed at
- * describing the symptoms as well as the number of their occurrences
+ * A trend analysis program aimed at describing the symptoms
+ * as well as the number of their occurrences.
  */
 public class AnalyticsCounter {
 	/**
@@ -15,8 +15,8 @@ public class AnalyticsCounter {
 	public static final String FILE_NAME_OUT = "results.out";
 
 	/**
-	 * Reads data from a text file which is a list of symptoms (one symptom per line);
-	 * Counts all occurrences of any symptom listed in the file;
+	 * Reads data from a text file which is a list of symptoms (one symptom per line).
+	 * Counts all occurrences of any symptom listed in the file.
 	 * Generates a new text file named "results.out" which lists each symptom
 	 * in alphabetical order, with the number of its occurrences in the file.
 	 * @param args A string array containing the command line arguments,
