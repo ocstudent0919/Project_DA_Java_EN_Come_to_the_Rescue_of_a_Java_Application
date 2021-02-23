@@ -23,9 +23,9 @@ public class AnalyticsCounter {
 	 *             it can be empty if no arguments were used
 	 */
 	public static void main(String[] args) {
-		ISymptomReader reader = new ReadSymptomDataFromFile(FILE_NAME_IN);
-		ISymptomCounter counter = new SymptomCounterImpl(reader.getSymptoms());
-		ISymptomWriter writer = new WriteSymptomDataToFile(FILE_NAME_OUT, counter.countSymptoms());
+		ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile(FILE_NAME_IN);
+		SymptomCounterImpl counter = new SymptomCounterImpl(reader.getSymptoms());
+		WriteSymptomDataToFile writer = new WriteSymptomDataToFile(FILE_NAME_OUT, counter.countSymptoms());
 		writer.writeSymptoms();
 	}
 }
